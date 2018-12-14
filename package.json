@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Test algo",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "start": "node longestCommonPrefix.js"
+  },
   "pre-commit": [
     "test"
   ],
