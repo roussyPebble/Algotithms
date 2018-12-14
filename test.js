@@ -2,7 +2,9 @@ var longestCommonPrefix = function(strs) {
     let max=0;    
     let word='';
     let chain="abcdefghijklmnopqrstuvwxyz";
-    
+    let len=strs.length;
+    if (len===0) return '';
+    if (len===1) return strs[0];
     
     let iteration=0;
     let quickSort = function (ary, comparator) {
@@ -10,24 +12,20 @@ var longestCommonPrefix = function(strs) {
       };    
     quickSort(strs,function(a,b){return a>b});
     
-    let singleCharStr=stringFromArr(strs,0,0,strs.length);
+    let singleCharStr=stringFromArr(strs,0,0,len);
     console.log(singleCharStr);
     let i=0;
-    while(i<singleCharStr.length-1){
         let t=singleCharStr;
         let currentChar=singleCharStr[i]
         let start=t.indexOf(currentChar);
         let end=t.lastIndexOf(currentChar);
         let diff=end-start;
-        if(diff>0 && diff>=max) {
+        if(diff+1!==len) return '';
             max=diff;
-            console.log(`max=${diff}, char=${currentChar}`);
+           console.log(`max=${diff}, char=${currentChar}`);
             word=recur(start,end+1,max+1,1,strs,currentChar);
             console.log(`word=${word}`);
-        }
-        i=end+1;
-    }
-    return word;
+    return  word ;
     function stringFromArr(arr, position,start,end){
         let singleCharStr='';
         for (let i=start;i<end;i++){
@@ -37,8 +35,7 @@ var longestCommonPrefix = function(strs) {
          return singleCharStr;
     }
     function recur(start,end,max,iteraction,chars,word){
-        console.log(`start=${start}, end=${end}, max=${max}, iteration=${iteration}`);
-        if(iteraction===chars.length) return word;
+        console.log(`start=${start}, end=${end}, max=${max}, iteration=${iteraction}`);
         let s=stringFromArr(chars,iteraction,start,end);
         let test_condition=s[0]+"{"+max+"}";
         let reg=new RegExp(test_condition);
@@ -93,7 +90,12 @@ var longestCommonPrefix = function(strs) {
     
      
 };
-let words=["dog","racecar","car","doggy","racebug"];
+//let words=["dog","racecar","car","doggy","racebug"];
+//let words=["flower","flow","flight"];
+//let words = ["c","acc","ccc"];
+//let words=["a"];
+//let words=["a","a","b"];
+let words=["abca","abc"];
 console.log(`Start with ${words}`);
 let prefix=longestCommonPrefix( words);
 console.log(`-----------------`);
