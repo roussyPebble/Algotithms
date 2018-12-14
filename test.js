@@ -5,14 +5,10 @@ var longestCommonPrefix = function(strs) {
     let len=strs.length;
     if (len===0) return '';
     if (len===1) return strs[0];
-    
+    if (strs[0] ==='') return '';
     let iteration=0;
-    let quickSort = function (ary, comparator) {
-        doQuickSort(ary, comparator, 0, ary.length - 1);
-      };    
-    quickSort(strs,function(a,b){return a>b});
-    
-    let singleCharStr=stringFromArr(strs,0,0,len);
+    let singleCharStr=checkOnly(strs,len);
+    if(singleCharStr===null) return '';
     console.log(singleCharStr);
     let i=0;
         let t=singleCharStr;
@@ -26,6 +22,13 @@ var longestCommonPrefix = function(strs) {
             word=recur(start,end+1,max+1,1,strs,currentChar);
             console.log(`word=${word}`);
     return  word ;
+    function checkOnly(arr,len){
+        let check=arr[0][0];
+        for (let i=1;i<len;i++){
+               if(check!==strs[i][0]) return null;
+         }
+         return (new Array(len)).fill(check);
+    }
     function stringFromArr(arr, position,start,end){
         let singleCharStr='';
         for (let i=start;i<end;i++){
@@ -47,55 +50,15 @@ var longestCommonPrefix = function(strs) {
             return word;
         }
     }
-    function check(a,b){
-        let min=Math.min(a.length,b.length);
-        let max=0;
-        for (let i=0;i<min;i++){
-            if (a.charCodeAt(i)-b.charCodeAt(i) !== 0) break;
-            max++;
-        }
-        return max;
-    }
-    function swap(ary, x, y) {
-        var temp = ary[x];
-        ary[x] = ary[y];
-        ary[y] = temp;
-      }
-      function randomIntInRange(low, high) {
-        return Math.round(low + (Math.random() * (high - low)));
-      }
-      function doQuickSort(ary, comparator, p, r) {
-        if (p < r) {
-          var pivotIndex = randomIntInRange(p, r);
-          var i = p - 1;
-    
-          swap(ary, pivotIndex, r);
-          var pivot = ary[r];
-          for (var j = p; j < r; j++) {
-            if (comparator(ary[j], pivot) <= 0) {
-              i += 1;
-              swap(ary, i, j);
-            }
-          }
-    
-          swap(ary, i + 1, j);
-          var q = i + 1;
-    
-          // (2) Recurse on each half.
-    
-          doQuickSort(ary, comparator, p, q - 1);
-          doQuickSort(ary, comparator, q + 1, r);
-        }
-      }
-    
-     
+      
 };
 //let words=["dog","racecar","car","doggy","racebug"];
 //let words=["flower","flow","flight"];
 //let words = ["c","acc","ccc"];
 //let words=["a"];
 //let words=["a","a","b"];
-let words=["abca","abc"];
+//let words=["",""];
+let words=["abca","abc","abca"];
 console.log(`Start with ${words}`);
 let prefix=longestCommonPrefix( words);
 console.log(`-----------------`);
