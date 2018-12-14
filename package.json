@@ -4,7 +4,8 @@
   "description": "Test algo",
   "main": "index.js",
   "scripts": {
-    "start": "node longestCommonPrefix.js"
+    "start": "node longestCommonPrefix.js",
+    "test": "node test.js"
   },
   "pre-commit": [
     "test"
