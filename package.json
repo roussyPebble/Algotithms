@@ -4,7 +4,7 @@
   "description": "Test algo",
   "main": "index.js",
   "scripts": {
-    "start": "node fill_water/fill_water.js",
+    "start": "node jump/jump2.js",
     "test": "node test.js"
   },
   "pre-commit": [
