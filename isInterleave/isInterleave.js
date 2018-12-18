@@ -11,6 +11,10 @@ var isInterleave = function(s1, s2, s3) {
     let i=0;
     let ind=0;
     while(i<s1.length){
+       
+    }
+    return check(marker,s2,s3);
+    function recur(){
         let t=s3.indexOf(s1[i],marker[i]);
         if(t!==-1){
             marker[i]=t;
@@ -18,7 +22,6 @@ var isInterleave = function(s1, s2, s3) {
             console.log(marker);
         }
     }
-    return check(marker,s2,s3);
     function check(marker, s2, s3){
         let s='';
         for (let i=0;i<marker.length;i++){

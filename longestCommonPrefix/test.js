@@ -1,4 +1,5 @@
 //https://leetcode.com/problems/longest-common-prefix/
+var test=require('../test.js').Test;
 var longestCommonPrefix = function(strs) {
     let max=0;    
     let word='';
@@ -10,7 +11,7 @@ var longestCommonPrefix = function(strs) {
     let iteration=0;
     let singleCharStr=checkOnly(strs,len);
     if(singleCharStr===null) return '';
-    console.log(singleCharStr);
+    //console.log(singleCharStr);
     let i=0;
         let t=singleCharStr;
         let currentChar=singleCharStr[i]
@@ -19,9 +20,9 @@ var longestCommonPrefix = function(strs) {
         let diff=end-start;
         if(diff+1!==len) return '';
             max=diff;
-           console.log(`max=${diff}, char=${currentChar}`);
+           //console.log(`max=${diff}, char=${currentChar}`);
             word=recur(start,end+1,max+1,1,strs,currentChar);
-            console.log(`word=${word}`);
+            //console.log(`word=${word}`);
     return  word ;
     function checkOnly(arr,len){
         let check=arr[0][0];
@@ -39,12 +40,12 @@ var longestCommonPrefix = function(strs) {
          return singleCharStr;
     }
     function recur(start,end,max,iteraction,chars,word){
-        console.log(`start=${start}, end=${end}, max=${max}, iteration=${iteraction}`);
+        //console.log(`start=${start}, end=${end}, max=${max}, iteration=${iteraction}`);
         let s=stringFromArr(chars,iteraction,start,end);
         let test_condition=s[0]+"{"+max+"}";
         let reg=new RegExp(test_condition);
         let condition=reg.test(s);
-        console.log(`s=${s}, condition=${condition}`);
+        //console.log(`s=${s}, condition=${condition}`);
         if (condition){
               return recur(start,end,max,iteraction+1,chars,word+s[0]);
         }else{
@@ -53,15 +54,14 @@ var longestCommonPrefix = function(strs) {
     }
       
 };
-//let words=["dog","racecar","car","doggy","racebug"];
-//let words=["flower","flow","flight"];
-//let words = ["c","acc","ccc"];
-//let words=["a"];
-//let words=["a","a","b"];
-//let words=["",""];
-let words=["abca","abc","abca"];
-console.log(`Start with ${words}`);
-let prefix=longestCommonPrefix( words);
-console.log(`-----------------`);
-console.log(`prefix=${prefix}`);
+let s=[
+    {in:["dog","racecar","car","doggy","racebug"],expected:""},
+    {in:["flower","flow","flight"],expected:"fl"},
+    {in:["c","acc","ccc"],expected:""},
+    {in:["a"],expected:"a"},
+    {in:["a","a","b"],expected:""},
+    {in:["",""],expected:""},
+    {in:["abca","abc","abca"],expected:"abc"},
+]
+test(s,longestCommonPrefix);
 
