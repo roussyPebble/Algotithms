@@ -1,3 +1,4 @@
+//https://leetcode.com/problems/longest-common-prefix/
 var longestCommonPrefix = function(strs) {
     let max=0;    
     let word='';

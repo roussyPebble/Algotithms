@@ -1,5 +1,5 @@
 // node longestCommonPrefix.js
-var Sort=require('./quick-sort.js').quickSort;
+var Sort=require('../quick-sort.js').quickSort;
 var longestCommonPrefix = function(strs) {
     let arr=new Array(26);
     arr.fill(0);
