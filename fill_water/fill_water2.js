@@ -3,40 +3,27 @@
 let test=require('../test.js').Test;
 var trap = function(height) {
     let s=height;
-    let max=find_max(s);
-    //console.log(`max=${max}`);
-    let t1=water(s,0,max);
-    let t2=waterBack(s,s.length-1,max);
-    //console.log(`t1=${t1}`);
-    //console.log(`t2=${t2}`);
+    let max=fm(s);
+    let t1=l(s,0,max,0,1);
+    let t2=l(s,max,s.length-1,s.length-1,-1)
+    console.log(`t1=${t1}`);
+    console.log(`t2=${t2}`);
     return t1+t2;
-
-    function water(s,start,end){
+    
+    function l(s,start,end,ind,inc){
+        console.log(`start=${start}, end=${end}, ind=${ind}`);
         let block=0;
         let sum=0;
-        for(let i=start;i<end;i++){
-            if (s[i]>block) {
-                block=s[i];
+        for(;ind<end;ind+=inc){
+            if (s[ind]>block) {
+                block=s[ind];
             }else{
-                sum+=Math.max(0,block-s[i]);
+                sum+=Math.max(0,block-s[ind]);
             }
         }
         return sum;
     }
-    function waterBack(s,start,end){
-        let block=0;
-        let sum=0;
-        for(let i=start;i>end;i--){
-            if (s[i]>block) {
-                block=s[i];
-            }else{
-                sum+=Math.max(0,block-s[i]);
-            }
-        }
-        return sum;
-    }
-
-    function find_max(s){
+    function fm(s){
         let max=0;
         for (let i=1;i<s.length;i++){
             if(s[i]>s[max]) max=i;
