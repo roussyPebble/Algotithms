@@ -10,13 +10,12 @@ var firstMissingPositive = function(nums) {
     let a=new Array(len+1);
     a.fill(false);
     let positif=len;
-    for (let i=0;i<len;i++){
-        let n=nums[i];
+    for (let i=0,n=nums[0];i<len;n=nums[++i]){
         if(n<=0 || n>len || a[n]) {
             positif--;
-            continue;
+        }else{
+            a[n]=true;
         }
-        a[n]=true;
     }  
     let i=1;
     while(i<=positif && a[i]){i++;};
