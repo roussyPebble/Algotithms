@@ -31,10 +31,10 @@ function vacation(s) {
         }
         previous=f;
     }
-    
-    if (maxSum<=0 || changeDay <=0 ) return result;
-    result=changeDay-start+ Math.min(maxSum,start+1);
-    console.log(`start=${start}, maxSum=${maxSum}, changeDay=${changeDay}, r=${result}`);
+  
+    if (maxSum<=0 || changeDay <0 ) return result;
+    result=changeDay-start +  Math.min(maxSum,start+1);
+    //console.log(`start=${start}, maxSum=${maxSum}, changeDay=${changeDay}, r=${result}`);
     for(let i=len-1;i>changeDay;i--){
         result+=s[i];
     }
@@ -45,7 +45,12 @@ let s=[
     {in:[1,1,0,1,0,0,1,1],expected:7},
     {in:[0,0,0,1,1,0,0,0,1],expected:9},
     {in:[0,0,0,1,1,0,0,0],expected:5},
-    {in:[1,0],expected:0}
+    {in:[1,0],expected:0},
+    {in:[1,1,0],expected:0},
+    {in:[0,1],expected:2},
+    {in:[1,1,1,1,0,0,0,0],expected:0},
+    {in:[1,1,1,1,0,0,0,0,1],expected:8}
+
 ];
 test(s,vacation);
-
+//test([s[5]],vacation);
