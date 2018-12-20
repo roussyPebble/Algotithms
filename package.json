@@ -4,7 +4,7 @@
   "description": "Test algo",
   "main": "index.js",
   "scripts": {
-    "start": "node sum/sum.js",
+    "start": "node ZigZag/ZigZag.js",
     "stop": "node vacation/vacation.js",
     "test": "node test.js"
   },
