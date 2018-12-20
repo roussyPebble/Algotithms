@@ -23,7 +23,6 @@ var convert = function(s, numRows) {
                 r+=s[i+j];
                 let exp=k-i;
             if(i<numRows-1&&i>0&&exp<len){
-                
                 //console.log(`---------- p=${i}, k=${k}, p+k=${exp} `);
                 r+=s[exp];
             }

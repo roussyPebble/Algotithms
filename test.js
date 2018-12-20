@@ -3,7 +3,7 @@ exports.Test=function test(arr,func){
     for(let i=0;i<arr.length;i++){
         let r=func(arr[i].in);
         let ex=arr[i].expected
-        console.log(`Test ${arr[i].in}, result = ${r}, expexted=${ex}  -  ${r===ex}`);
+        console.log(`Test ${arr[i].in}, result = ${r}, expexted = ${ex}  -  ${r===ex}`);
     }
 };
 exports.TestExt=function(arr,func){
@@ -19,6 +19,6 @@ exports.TestExt=function(arr,func){
                 inArg+=`arg${j+1} =  ${arr[i].in[j]}, `;
             }
         }
-        console.log(`Test ${inArg} result = ${r}, expexted= ${ex}  -  ${r===ex}, ------ time = ${timeEnd-timeStart}`);
+        console.log(`Test ${inArg} result = ${r}, expexted = ${ex}  -  ${r===ex}, ------ time = ${timeEnd-timeStart}`);
     }
 };
