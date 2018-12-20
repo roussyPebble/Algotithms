@@ -4,7 +4,7 @@
   "description": "Test algo",
   "main": "index.js",
   "scripts": {
-    "start": "node Sulphur2014/max_ropes.js",
+    "start": "node sum/sum.js",
     "stop": "node vacation/vacation.js",
     "test": "node test.js"
   },
