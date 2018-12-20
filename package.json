@@ -4,7 +4,8 @@
   "description": "Test algo",
   "main": "index.js",
   "scripts": {
-    "start": "node vacation/vacation.js",
+    "start": "node Sulphur2014/max_ropes.js",
+    "stop": "node vacation/vacation.js",
     "test": "node test.js"
   },
   "pre-commit": [
