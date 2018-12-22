@@ -22,7 +22,7 @@ let s=[
     {in:"-+3" , expected: false},
     {in:"95a54e53" , expected: false},
     {in:"" , expected: false},
-    {in:" 0.e2" , expected: false},
+    {in:" 0.e2" , expected: true},
     {in:" 10 " , expected: true},
     {in:"10" , expected: true},
     {in:".1" , expected: true},
