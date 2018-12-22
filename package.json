@@ -4,8 +4,12 @@
   "description": "Test algo",
   "main": "index.js",
   "scripts": {
-    "stop": "node ZigZag/ZigZag.js",
-    "start": "node firstMissingPositive/firstMissingPositive.js",
+    "start": "node reverse/reverse.js",
+
+    
+    
+    
+    "stop": "node reverse/reverse.js",
     "test": "node test.js"
   },
   "pre-commit": [

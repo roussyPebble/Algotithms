@@ -5,6 +5,20 @@ let test=require('../test.js').TestExt;
 
 function solution(A, B, C) {
     // write your code in JavaScript (Node.js 8.9.4)
+    let s={
+        weight:null,
+        next:null
+    };
+    let prev=null;
+    let n=null;    
+    let W=new Array(A.length);
+    W.fill(0);
+    for(let i=0;i<C.length;i++){
+        let j=C[i];
+        let w=A[j]-B[j];
+        if (w<0) return i;
+        W[j]=w;
+    }
 }
 
 
