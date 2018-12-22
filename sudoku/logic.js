@@ -33,7 +33,7 @@ exports.start=function start() {
         depth = Math.max(depth, x);
         if (x === c.emptyElem.length) {
             console.info("Solution found with nbIteration=" + nbIteration + ", nbValidation=" + nbValidation + "\n");
-            applySolution(c);
+            //applySolution(c);
         } else {
             for (var k = 1; k <= 9; k++) {
                 nbValidation++;

@@ -4,7 +4,7 @@
   "description": "Test algo",
   "main": "index.js",
   "scripts": {
-    "start": "node reverse/reverse.js",
+    "start": "node Valid_Number/Valid_Number.js",
 
     
     
