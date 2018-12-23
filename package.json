@@ -4,7 +4,7 @@
   "description": "Test algo",
   "main": "index.js",
   "scripts": {
-    "start": "node minRefuelStops/minRefuelStops.js",
+    "start": "node Magical_Number/Magical_Number.js",
     "stop": "node reverse/reverse.js",
     "debug": "node inspect  minRefuelStops/minRefuelStops.js"
   },
