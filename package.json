@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node Magical_Number/Magical_Number.js",
-    "stop": "node reverse/reverse.js",
+    "stop": "node duabolic_number/duabolic_number.js",
     "debug": "node inspect  minRefuelStops/minRefuelStops.js"
   },
   "pre-commit": [
