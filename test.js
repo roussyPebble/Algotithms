@@ -2,8 +2,9 @@ exports.Test=function test(arr,func){
     console.log(`Execute - ${func.name}`);
     for(let i=0;i<arr.length;i++){
         let r=func(arr[i].in);
-        let ex=arr[i].expected
-        console.log(`Test ${arr[i].in}, result = ${r}, expexted = ${ex}  -  ${r===ex}`);
+        let ex=arr[i].expected;
+        let show=arr[i].show===false?' ... ':`${arr[i].in}`;
+        console.log(`Test ${show}, result = ${r}, expexted = ${ex}  -  ${r===ex}`);
     }
 };
 exports.TestExt=function(arr,func){
