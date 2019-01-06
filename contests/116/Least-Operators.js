@@ -25,8 +25,7 @@ var leastOpsExpressTarget = function(x, target) {
             let c=count;
             let f=Math.abs(target-Math.pow(x,a));
             if(f<target){
-                if(a===0) a=2;    
-                c+=a-1;
+                c+=Math.abs(a-1);
                 if(f>0){ 
                     recur(++c,x,f);
                 }else{
