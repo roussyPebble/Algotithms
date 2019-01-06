@@ -4,8 +4,8 @@
   "description": "Test algo",
   "main": "index.js",
   "scripts": {
-    "start": "node Magical_Number/Magical_Number.js",
-    "stop": "node duabolic_number/duabolic_number.js",
+    "start": "node Integer2Roman/Integer2Roman.js",
+    "stop": "node Integer2Roman/Integer2Roman.js",
     "debug": "node inspect  minRefuelStops/minRefuelStops.js"
   },
   "pre-commit": [
