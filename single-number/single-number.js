@@ -6,8 +6,9 @@ var test=require('../test.js').Test;
  */
 var singleNumber = function(nums) {
     
-    return solution5(nums);
+    return solution3(nums);
     
+    /* Best solution */
     function solution5(nums){
         let  a=0,len=nums.length;
         for(let i=0;i<len;i++){
@@ -15,6 +16,7 @@ var singleNumber = function(nums) {
         }
         return a;
     }
+
     function solution4(a){
         let len=a.length-1;
         for(let i=0;i<len;i++){
@@ -22,13 +24,14 @@ var singleNumber = function(nums) {
         }
         return a[len];
     }
+
     function solution3(a){
         /* not working */
         //2∗(a+b+c)−(a+a+b+b+c)=c
         let sum1=0,sum2=0;
         for (let i=0;i<a.length;i++){
-            sum1+=a[i];
-            sum2+=2*a[i];
+            sum1+=a[i]/2;
+            sum2+=a[i];
         }
         return 2*sum1-sum2;
     }
@@ -64,8 +67,8 @@ var singleNumber = function(nums) {
 let s=[
     {in:[4,1,2,1,2],expected:4},
     {in:[2,2,1],expected:1},
-    {in:[1,2,1],expected:2},
-    {in:[0],expected:0}
+    {in:[1,2,1],expected:2}
+    //{in:[0],expected:0}
 
 ];
 test(s,singleNumber);
