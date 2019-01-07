@@ -1,0 +1,6 @@
+function test(n){
+    let c=n[0];
+    let s= n.join('');
+    let regex=new RegExp('^('+c+')+$');
+    return regex.test(s);
+}
