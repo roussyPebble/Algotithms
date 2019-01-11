@@ -1,3 +1,4 @@
+//https://leetcode.com/problems/ugly-number/
 var test=require('../test.js').Test;
 function isUgly(n){
 

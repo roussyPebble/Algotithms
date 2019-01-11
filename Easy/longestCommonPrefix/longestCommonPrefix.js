@@ -1,3 +1,4 @@
+//https://leetcode.com/problems/longest-common-prefix/
 // node longestCommonPrefix.js
 var Sort=require('../quick-sort.js').quickSort;
 var longestCommonPrefix = function(strs) {
