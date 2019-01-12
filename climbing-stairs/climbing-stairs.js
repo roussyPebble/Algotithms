@@ -50,7 +50,8 @@ let s=[
     
     {in:35,expected:14930352},
     {in:36,expected:24157817},
-    {in:50,expected:20365011074}
+    {in:50,expected:20365011074},
+    {in:100,expected:573147844013817140000},
 ];
 //test(s,solution);
 test(s,solution2);
