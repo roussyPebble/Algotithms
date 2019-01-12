@@ -20,6 +20,6 @@ exports.TestExt=function(arr,func){
                 inArg+=`arg${j+1} =  ${arr[i].in[j]}, `;
             }
         }
-        console.log(`Test ${inArg} result = ${r}, expexted = ${ex}  -  ${r===ex}, ------ time = ${timeEnd-timeStart}`);
+        console.log(`Test ${inArg} result = ${r}, expected = ${ex}  -  ${r===ex}, ------ time = ${timeEnd-timeStart}`);
     }
 };
