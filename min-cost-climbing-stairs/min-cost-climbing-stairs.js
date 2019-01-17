@@ -5,16 +5,23 @@
  */
 var minCostClimbingStairs = function(cost) {
     let min=Number.MAX_SAFE_INTEGER;
-    step(0,0);
-    step(1,cost[0]);
+    let len=cost.length;
+    let stepCost=new Array(len);
+    stepCost.fill(min);
+    cost.push(0);
+    cost.push(0);
+    step(-1,0);
     return min;
 
     function step(i,c){
-        if(i===cost.length-1) {
+        if(i>=len) {
             min=Math.min(min,c);
         }else{
-            if (i<cost.length-1) step(i+1,c+cost[i+1]);
-            if (i<cost.length-2) step(i+2,c+cost[i+2]);
+            if(stepCost[i]<c) return;
+            stepCost[i]=c;
+            step(i+2,c+cost[i+2]);
+            step(i+1,c+cost[i+1]);
+        
         }
     }
 };
