@@ -1,6 +1,8 @@
 //https://leetcode.com/problems/climbing-stairs/
 // solution2  - 100%
+import  l from './log';
 var test=require('../test.js').Test;
+
 var solution =function(n){
     let sum=0;
     r(1,n);
@@ -53,5 +55,7 @@ let s=[
     {in:50,expected:20365011074},
     {in:100,expected:573147844013817140000},
 ];
+l("Climbing stair two ways implementation.")
+
 //test(s,solution);
 test(s,solution2);
