@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        ".vscode/": true,
+        "*.json": true,
+        "CSharp_Algorithm/": true
+    }
+}

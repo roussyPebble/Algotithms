@@ -4,7 +4,7 @@
   "description": "Test algo",
   "main": "index.js",
   "scripts": {
-    "start": "node Integer2Roman/Integer2Roman.js",
+    "start": "node Unfinished/Open-the-Lock/Open-the-Lock.js",
     "stop": "node Integer2Roman/Integer2Roman.js",
     "debug": "node inspect  minRefuelStops/minRefuelStops.js"
   },
