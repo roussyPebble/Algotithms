@@ -7,10 +7,16 @@ let ext=require('./ext.js');
 * @return {number}
 */
 var openLock = function(deadends, target) {
-    let b=new Array(4);
-    b.fill(0);
+    let b='0000',t=target,count=0, canTurn=false,d=deadends;
     if (!ext.isdead(b,deadends)) return -1;
-    let t=target.split('');
-    let c=0;
+    while(b!==t){
+        while(b[0]!=t[0]){
+            let a=ext.approach(t[0],b[0]);
+            let h=ext.turn(b,0,a);
+            if(ext.isdead(h,d)){
+                if(ext.canApproachFrom)
+            }
+        }
+    }
 };
 test(ext.s,openLock);

@@ -9,8 +9,11 @@ let s=[
         expected:0, show : false}
 ];
 
-Test(s,solution);
+//Test(s,solution);
 // 38 - 8014,time = 3292
+// 1000 - 209040, time = 40
+// 900 - 189293, time = 27
 let l=s[4].in.slice(0,1000);
 
-//TestExt([{in:[l],expected:8014,show:false}],solution);
+TestExt([{in:[l],expected:8014,show:false}],solution);
+//TestExt([{in:[[10, 15, 20]],expected:8014,show:false}],solution);

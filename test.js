@@ -23,3 +23,6 @@ exports.TestExt=function(arr,func){
         console.log(`Test ${inArg} result = ${r}, expected = ${ex}  -  ${r===ex}, ------ time = ${timeEnd-timeStart}`);
     }
 };
+exports.log=function(m){
+    console.log(m);
+};
