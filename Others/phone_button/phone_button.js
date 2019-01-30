@@ -1,18 +1,7 @@
 //https://leetcode.com/problems/letter-combinations-of-a-phone-number/
 var letterCombinations = function(digits) {
     if(digits.length===0) return [];
-    let book=[
-        '',
-        '*',
-        'abc',
-        'def',
-        'ghi',
-        'jkl',
-        'mno',
-        'pqrs',
-        'tuv',
-        'wxyz'
-    ], s=[];
+    let book=['','*','abc','def','ghi','jkl','mno','pqrs','tuv','wxyz'], s=[];
     recursion (digits.length,'');
 	return s;
 
