@@ -5,7 +5,7 @@
   "main": "index.js",
   "module": "main.js",
   "scripts": {
-    "start": "node -r esm min-cost-climbing-stairs/unittest.js",
+    "start": "node -r esm Unfinished/Can_I_Win/unittest.js",
     "stop": "node Integer2Roman/Integer2Roman.js",
     "debug": "node inspect  minRefuelStops/minRefuelStops.js"
   },
