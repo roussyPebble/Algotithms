@@ -14,7 +14,9 @@ var openLock = function(deadends, target) {
             let a=ext.approach(t[0],b[0]);
             let h=ext.turn(b,0,a);
             if(ext.isdead(h,d)){
-                if(ext.canApproachFrom)
+                if(ext.canApproachFrom){
+                    
+                }
             }
         }
     }

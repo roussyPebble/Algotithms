@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+    
+<body>
+    <h3> SudoKu test</h3>
+   <!-- <script type="text/javascript" src="sudoku.js"></script> -->
+   <!-- <script type="text/javascript" src="http://127.0.0.1:3000/sudoku.js"></script>  -->
+   <script type="text/javascript">
+    /**
+    * @param {character[][]} board
+    * @return {void} Do not return anything, modify board in-place instead.
+    */
+      var test3=[["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]];
+        var solveSudoku = function(board) {
+        var myLibrary=function(e){var t={};function n(r){if(t[r])return t[r].exports;var o=t[r]={i:r,l:!1,exports:{}};return e[r].call(o.exports,o,o.exports,n),o.l=!0,o.exports}return n.m=e,n.c=t,n.d=function(e,t,r){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(n.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var o in e)n.d(r,o,function(t){return e[t]}.bind(null,o));return r},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="/",n(n.s=0)}([function(e,t,n){"use strict";n.r(t);class r{constructor(e=0,t=[]){this.group=t,this.value=e}equal(e){return this.value===e.value}}class o{constructor(e=[]){this.elements=e}_check(e){for(let t in this.elements)if(this.elements.hasOwnProperty(t)&&this.elements[t].value===e)return!1;return!0}isValid(e){return this._check(e)}isSolved(){return this._check(0)}}class l{constructor(){this.collection=[],this.emptyElem=[],this.allElem=[];for(let e=0;e<27;e++)this.collection.push(new o)}isSudokuSolved(){for(let e in this.collection)if(this.collection.hasOwnProperty(e)&&!this.collection[e].isSolved())return!1;return!0}groupValidation(){for(let e in this.collection)if(this.collection.hasOwnProperty(e)&&9!==this.collection[e].elements.length)return!1;return!0}isValid(e,t){let n=!0,r=this.emptyElem[e].group;for(let e in r)if(r.hasOwnProperty(e)&&!r[e].isValid(t)){n=!1;break}return this.emptyElem[e].value=n?t:0,n}validNumbers(e){let t=[!0],n=this.allElem[e].group;for(let e=1;e<=9;e++){t[e]=!0;for(let r in n)if(n.hasOwnProperty(r)&&!n[r].isValid(e)){t[e]=!1;break}}return t}}var i=0,u=0,s=0;function c(e){var t=new l;for(let n=0;n<9;n++)for(let o=0;o<9;o++){let l=n,i=9+o,u=18+3*Math.floor(n/3)+Math.floor(o/3),s=new r(e[9*n+o],[t.collection[l],t.collection[i],t.collection[u]]);t.collection[l].elements.push(s),t.collection[i].elements.push(s),t.collection[u].elements.push(s),t.allElem.push(s),0===s.value&&t.emptyElem.push(s)}return t.groupValidation()?t:(console.error("GroupValidation failed"),null)}function a(e){var t=c(e),n=!1,r=null;return function e(o){if(i++,u=Math.max(u,o),o===t.emptyElem.length)n=!0,r=function(e){for(var t=[],n=0,r=0;n<9;n++)for(var o=0;o<9;o++,r++)t[r]=e.collection[n].elements[o].value;return t.join("")}(t),console.info("Solution found with nbIteration="+i+", nbValidation="+s+"\n"),console.log(r);else{for(let n=1;n<=9;n++)s++,t.isValid(o,n)&&e(o+1);t.emptyElem[o].value=0}}(0),console.info("\ntotal nbIteration  = "+i),console.info("total nbValidation = "+s),console.info("Max depth = "+u),{solutionFound:n,c:r}}var f=function(e){let t=[];return e.split("").forEach(e=>{t.push(1*e)}),a(t)};n.d(t,"test1",function(){return h}),n.d(t,"test2",function(){return p}),n.d(t,"test3",function(){return d}),n.d(t,"doIt",function(){return m});const h="53..7....6..195....98....6.8...6...34..8.3..17...2...6.6....28....419..5....8..79",p=[["53..7...."],["6..195..."],[".98....6."],["8...6...3"],["4..8.3..1"],["7...2...6"],[".6....28."],["...419..5"],["....8..79"]],d=[["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]];function m(e){let t=e.join("").replace(/,/g,"").replace(/\./g,"0");return f(t)}}]);let r=myLibrary.doIt(board);
+        
+        if(r.solutionFound){
+            for (let i=0;i<9;i++){
+                for (let j=0;j<9;j++){
+                    board[i][j]=r.c[i*9+j];
+                }
+            }
+        }
+        
+     };
+     let test =test3;
+    solveSudoku(test);
+    console.log(test.join(''));
+   </script>
+</head>
+</body>
+</html>

@@ -7,7 +7,13 @@
   "scripts": {
     "start": "node -r esm Unfinished/Can_I_Win/unittest.js",
     "stop": "node Integer2Roman/Integer2Roman.js",
-    "debug": "node inspect  minRefuelStops/minRefuelStops.js"
+    "sudoku": "node -r esm Unfinished/sudoku/unittest.js",
+    "debug": "node inspect  minRefuelStops/minRefuelStops.js",
+    "build": "webpack --config webpack.config.js",
+    "watch": "webpack --config webpack.config.js --watch",
+    "webpack-server": "webpack-dev-server --config webpack.config.js --open",
+    "server": "node  server.js",
+    "web-server": "http-server ./public"
   },
   "pre-commit": [
     "test"
@@ -20,8 +26,10 @@
     "debug": "^4.1.1",
     "detect-browser": "^3.0.1",
     "esm": "^3.1.0",
+    "extend": "^3.0.2",
     "grunt": "^1.0.3",
     "hls.js": "^0.10.1",
+    "http-server": "^0.11.1",
     "latest": "^0.2.0",
     "loadjs": "^3.5.5",
     "moment": "^2.22.2",
@@ -40,11 +48,13 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^1.0.1",
     "css-loader": "^0.28.11",
     "eslint": "^5.11.0",
     "eslint-plugin-react": "^7.10.0",
     "expect": "^23.4.0",
-    "express": "^4.16.3",
+    "express": "^4.16.4",
+    "grunt-contrib-clean": "^2.0.0",
     "ignore-styles": "^5.0.1",
     "jsdoc": "^3.5.5",
     "jsdom": "^11.12.0",
@@ -57,7 +67,9 @@
     "style-loader": "^0.21.0",
     "svg-sprite-loader": "^4.1.3",
     "webpack": "^4.28.2",
-    "webpack-cli": "^3.0.8"
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-middleware": "^3.5.2",
+    "webpack-dev-server": "^3.1.14"
   },
   "repository": {
     "type": "git",

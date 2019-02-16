@@ -1,5 +1,5 @@
 import solution from  "./Can_I_Win";
-import {TestExt} from "../../test";
+import {TestExt as test} from "../../test";
 
 let s=[
     {in:[10,40],expected:false,show:true},
@@ -21,4 +21,4 @@ let s=[
     {in:[5,6],expected:false,show:true},
     
 ]
-TestExt(s,solution);
+test(s,solution);
