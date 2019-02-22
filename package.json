@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node -r esm Unfinished/Can_I_Win/unittest.js",
     "stop": "node Integer2Roman/Integer2Roman.js",
-    "sudoku": "node -r esm Unfinished/sudoku/unittest.js",
+    "sudoku": "node -r esm hard/sudoku/unittest.js",
+    "skyline": "node -r esm hard/skyline-problem/unittest.js",
     "debug": "node inspect  minRefuelStops/minRefuelStops.js",
     "build": "webpack --config webpack.config.js",
     "watch": "webpack --config webpack.config.js --watch",

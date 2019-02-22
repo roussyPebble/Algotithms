@@ -20,7 +20,13 @@ exports.TestExt=function(arr,func){
                 inArg+=`arg${j+1} =  ${arr[i].in[j]}, `;
             }
         }
-        console.log(`Test ${inArg} result = ${r}, expected = ${ex}  -  ${r===ex}, ------ time = ${timeEnd-timeStart}`);
+        let assume=false;
+        if(typeof r === 'object' && typeof ex === 'object'){
+            assume=r.join('')===ex.join('');
+        }else{
+            assume=r===ex;
+        }
+        console.log(`Test ${inArg} result = ${r}, expected = ${ex}  -  ${assume}, ------ time = ${timeEnd-timeStart}`);
     }
 };
 exports.log=function(m){
