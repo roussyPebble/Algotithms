@@ -1,4 +1,4 @@
-function skyline(ind,n){
+export function skyline(ind,n){
     let len = n.length;
     let x=n[ind][1];
     let h=n[ind][2],ph1=ind,ph2=ind;
@@ -18,5 +18,13 @@ function skyline(ind,n){
     ind--;
     return {ind,x,h,ph1,ph2}; 
 }
+export function fillHeight(k,x,h){
+    if(k[x]) 
+        {
+            k[x].h=Math.max(k[x].h,h);
+        }else{
+            k[x]={x,h};
+        }
+}
 
-export default skyline;
+ 
