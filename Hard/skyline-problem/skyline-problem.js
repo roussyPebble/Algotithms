@@ -3,7 +3,7 @@
  * @param {number[][]} buildings
  * @return {number[][]}
  */
-import {skyline,fillHeight} from "./lib"
+import {skyline,fillHeight,fillR} from "./lib"
 import {log} from "../../test"
 import {quickSort} from "../../quicksort/quick-sort"
 
@@ -12,43 +12,41 @@ var  getSkyline = function(buildings) {
     if (len===0) return [];
     if (len===1) return [[n[0][0],n[0][2]],[n[0][1],0]];
     while(ind<len){
-        let k=new Array(10000),r=new Array(10000);
-        r.fill(-1);
+        let tmp=[],k=[],r=[];
+     
         let s=skyline(ind,n);
         //log('index=',s.ind);
         for (let i=ind; i<=s.ind; i++){
             let x=n[i][0],h=n[i][2];
-            fillHeight(k,x,h);
+            fillHeight(tmp,k,x,h);
             x=n[i][1];
-            fillHeight(k,x,h);
+            fillHeight(tmp,k,x,h);
         }
+        tmp=[];
         let previous={x:n[ind][0],h:n[ind][2]};
-        //log(k);
+        log(k);
         k.forEach(e => {
             if (e.x===previous.x) {
                 previous.h=Math.max(e.h,previous.h);
             }else{
-                if(e.h===previous.h){
-                    r[previous.x] = Math.max(r[previous.x],previous.h);
+                if(previous.h<=e.h){
+                    fillR(tmp,r,previous.x,previous.h);
                     previous=e;
                 }else{
-                    if(previous.h<e.h){
-                        r[previous.x] = Math.max(r[previous.x],previous.h);
-                        previous=e;
-                    }else{
-                        r[previous.x] = Math.max(r[previous.x],e.h);
-                    }
+                    fillR(tmp,r,previous.x,e.h);
+                    previous=e;
                 }
             }
         });
-        r[s.x]=0;
+        r.push({x:s.x,h:0});
         previous=-1;
-        for(let i=0; i<r.length;i++){
-            if(r[i]!==-1 && r[i]!==previous){
-                previous=r[i];
-                t.push([i,previous]);
+        r.forEach(e => {
+            if( e.h!==previous){
+                previous=e.h;
+                t.push([e.x,e.h]);
             }
-        }
+        });
+
         ind=s.ind+1;
     }
     return t;

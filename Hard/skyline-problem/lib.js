@@ -18,13 +18,32 @@ export function skyline(ind,n){
     ind--;
     return {ind,x,h,ph1,ph2}; 
 }
-export function fillHeight(k,x,h){
-    if(k[x]) 
+
+export function fillHeight(k,p,x,h){
+    let ind=k.indexOf(x);
+    if(ind!==-1) 
         {
-            k[x].h=Math.max(k[x].h,h);
+            p[ind].h=Math.max(p[ind].h,h);
         }else{
-            k[x]={x,h};
+            let pos=findPosition(k,x);
+            k.splice(pos.i,pos.r,x);
+            p.splice(pos.i,pos.r,{x,h});
         }
 }
+export function fillR(k,p,x,h){
+    let ind=k.indexOf(x);
+    if(ind!==-1) {
+        p[ind].h=Math.max(p[ind].h,h);
+    }else{
+        let pos=findPosition(k,x);
+        k.splice(pos.i,pos.r,x);
+        p.splice(pos.i,pos.r,{x,h});
+    }
+}
 
- 
+function findPosition(k,x){
+    let i=0,len=k.length;
+    while(i<len && x>k[i]){i++;}
+    let r=k[i]===x?1:0;
+    return {i,r};
+}
