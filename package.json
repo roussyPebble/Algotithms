@@ -7,8 +7,10 @@
   "scripts": {
     "start": "node -r esm Unfinished/Can_I_Win/unittest.js",
     "stop": "node Integer2Roman/Integer2Roman.js",
+    "str2int": "node -r esm Medium/str2int/str2int.js",
     "sudoku": "node -r esm hard/sudoku/unittest.js",
     "skyline": "node -r esm hard/skyline-problem/unittest.js",
+    "codility": "node -r esm codility/Yttrium_2019/unittest.js",
     "debug": "node inspect  minRefuelStops/minRefuelStops.js",
     "build": "webpack --config webpack.config.js",
     "watch": "webpack --config webpack.config.js --watch",
@@ -51,7 +53,6 @@
     "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^1.0.1",
     "css-loader": "^0.28.11",
-    "eslint": "^5.11.0",
     "eslint-plugin-react": "^7.10.0",
     "expect": "^23.4.0",
     "express": "^4.16.4",

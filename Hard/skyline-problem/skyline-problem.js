@@ -3,12 +3,12 @@
  * @param {number[][]} buildings
  * @return {number[][]}
  */
-import {skyline,fillHeight,fillR} from "./lib"
+import {skyline,fillHeight,leftEdge,rightEdge} from "./lib"
 import {log} from "../../test"
 import {quickSort} from "../../quicksort/quick-sort"
 
 var  getSkyline = function(buildings) {
-    let n=buildings,len=n.length,ind=0,t=[];
+    let n=buildings,len=n.length,ind=0,r=[];
     if (len===0) return [];
     if (len===1) return [[n[0][0],n[0][2]],[n[0][1],0]];
     while(ind<len){
@@ -18,39 +18,21 @@ var  getSkyline = function(buildings) {
         //log('index=',s.ind);
         for (let i=ind; i<=s.ind; i++){
             let x=n[i][0],h=n[i][2];
-            fillHeight(tmp,k,x,h);
+            fillHeight(tmp,k,x,h,leftEdge,i);
             x=n[i][1];
-            fillHeight(tmp,k,x,h);
+            fillHeight(tmp,k,x,h,rightEdge,i);
         }
         tmp=[];
         let previous={x:n[ind][0],h:n[ind][2]};
         log(k);
+        let leftIndex=0;
         k.forEach(e => {
-            if (e.x===previous.x) {
-                previous.h=Math.max(e.h,previous.h);
-            }else{
-                if(previous.h<=e.h){
-                    fillR(tmp,r,previous.x,previous.h);
-                    previous=e;
-                }else{
-                    fillR(tmp,r,previous.x,e.h);
-                    previous=e;
-                }
-            }
-        });
-        r.push({x:s.x,h:0});
-        previous=-1;
-        r.forEach(e => {
-            if( e.h!==previous){
-                previous=e.h;
-                t.push([e.x,e.h]);
-            }
+            leftIndex=e.edge(e,k,n,r,leftIndex);
         });
 
         ind=s.ind+1;
     }
-    return t;
-   
+    return r;
  };
 exports.solution =getSkyline
 export default  getSkyline
