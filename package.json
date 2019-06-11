@@ -9,7 +9,7 @@
     "stop": "node Integer2Roman/Integer2Roman.js",
     "str2int": "node -r esm Medium/str2int/str2int.js",
     "3Sum": "node -r esm Medium/3Sum/3Sum.js",
-    "3SumGood": "node -r esm Medium/3Sum/working.js",
+    "3SumClosest": "node -r esm Medium/3SumClosest/3SumClosest.js",
     "sudoku": "node -r esm hard/sudoku/unittest.js",
     "skyline": "node -r esm hard/skyline-problem/unittest.js",
     "codility": "node -r esm codility/Yttrium_2019/unittest.js",
