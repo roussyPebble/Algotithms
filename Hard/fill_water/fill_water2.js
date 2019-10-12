@@ -1,6 +1,6 @@
 //https://leetcode.com/problems/trapping-rain-water/submissions/
 //Runtime: 60 ms, faster than 99.84% of JavaScript online submissions for Trapping Rain Water.
-let test=require('../test.js').Test;
+let test=require('../../test.js').Test;
 var trap = function(height) {
     let s=height;
     let max=fm(s);
