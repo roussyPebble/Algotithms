@@ -1,21 +1,26 @@
-﻿
+﻿import {Element} from "./modelElement"
+import {GroupCollection} from "./modelGroupCollection"
 
-
-exports.initSolution=function initSolution() {
-    //var tab = lib_grab();
+var nbIteration=0, depth=0, nbValidation=0;
+export function   initSolution(tab) {
+    
     var c = new GroupCollection();
 
-    for (var col = 0; col < 9; col++) {
-        for (var raw = 0; raw < 9; raw++) {
-            var col1 = col;
-            var col2 = 9 + raw;
-            var col3 = 18 + 3 * Math.floor(col / 3) + Math.floor(raw / 3);
-            var elem = new Element(tab[col * 9 + raw], [c.collection[col1], c.collection[col2], c.collection[col3]]);
+    for (let col = 0; col < 9; col++) {
+        for (let raw = 0; raw < 9; raw++) {
+            let col1 = col;
+            let col2 = 9 + raw;
+            let col3 = 18 + 3 * Math.floor(col / 3) + Math.floor(raw / 3);
+           
+            let elem = new Element(tab[col * 9 + raw], [c.collection[col1], c.collection[col2], c.collection[col3]]);
             c.collection[col1].elements.push(elem);
             c.collection[col2].elements.push(elem);
             c.collection[col3].elements.push(elem);
             c.allElem.push(elem);
-            if (elem.value === 0) c.emptyElem.push(elem);
+            if (elem.value === 0) {
+                c.emptyElem.push(elem);
+                
+            }
         }
     }
     if (!c.groupValidation()) {
@@ -23,19 +28,23 @@ exports.initSolution=function initSolution() {
         return null;
     }
     return c;
-};
+}
 
-exports.start=function start() {
+export function start(tab) {
 
-    var c = initSolution();
+    var c = initSolution(tab);
+    var solutionFound=false;
+    var solution=null;
     function doRecurtion(x) {
         nbIteration++;
         depth = Math.max(depth, x);
         if (x === c.emptyElem.length) {
+            solutionFound=true;
+            solution=applySolution(c);
             console.info("Solution found with nbIteration=" + nbIteration + ", nbValidation=" + nbValidation + "\n");
-            //applySolution(c);
+            console.log(solution);
         } else {
-            for (var k = 1; k <= 9; k++) {
+            for (let k = 1; k <= 9; k++) {
                 nbValidation++;
                 if (c.isValid(x, k))
                     doRecurtion(x + 1);
@@ -47,14 +56,15 @@ exports.start=function start() {
     console.info("\ntotal nbIteration  = " + nbIteration);
     console.info("total nbValidation = " + nbValidation);
     console.info("Max depth = " + depth);
+    return {solutionFound,c:solution};
+}
 
-};
-exports.startWithWorker=function startWithWorker() {
-    if (window.Worker) {
-        var solutionsArray = [];
-        var myWorker = new Worker('/content/js/sudoku/worker.js');
-        myWorker.postMessage([lib_grab()]);
-        console.log('Message posted to worker');
+export function startWithWorker(tab) {
+    if (typeof window != 'undefined' && typeof window.Worker !== 'undefined') {
+        let solutionsArray = [];
+        let myWorker = new Worker('./logic.js');
+        myWorker.postMessage([tab]);
+        console.log('Message posted to worker2');
         myWorker.onmessage = function(e) {
             console.log('Solution found - ' + (solutionsArray.length+1));
             console.info("\ntotal nbIteration  = " + e.data[1]);
@@ -68,10 +78,19 @@ exports.startWithWorker=function startWithWorker() {
             }
         };
     } else {
-        start();
+        start(tab);
     } 
-};
-exports.validNumber=function validNumber(k) {
-    var solution=initSolution();
+}
+
+export function validNumber(k) {
+    let solution=initSolution();
     return solution.validNumbers(k);
-};
+}
+
+function applySolution(c) {
+    var arr = [];
+    for (var i = 0,k=0; i < 9; i++) 
+        for (var j = 0; j < 9; j++,k++) 
+            arr[k] = c.collection[i].elements[j].value;
+    return arr.join('');
+}

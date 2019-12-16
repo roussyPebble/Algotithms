@@ -9,6 +9,7 @@
  */
 import {log} from '../test';
  var minCostClimbingStairs = function(cost) {
+    log(`Length=${cost.length}`);
     let min=Number.MAX_SAFE_INTEGER;
     let len=cost.length;
     let stepCost=new Array(len+4);
@@ -33,7 +34,7 @@ import {log} from '../test';
         if(i>=len) {
             min=Math.min(min,c);
         }else{
-            if(stepCost[i]<c) return;
+            if(stepCost[i]<=c) return;
             stepCost[i]=c;
             if (cost[i+2]<=cost[i+1]){
                 step(i+2,c+cost[i+2]);
@@ -54,9 +55,13 @@ import {log} from '../test';
                     }
                 }
             }
-            
-            
         }
+    }
+    function checkOrder(i){
+        let  s1=s2=0;
+        // do{
+        //     s[1]+=cost[i+2]
+        // }
     }
 };
 

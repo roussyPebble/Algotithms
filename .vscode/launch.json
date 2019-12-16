@@ -5,23 +5,20 @@
     "version": "0.2.0",
     "configurations": [
 
+        
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
-            "program": "node ${workspaceFolder}/insert-interval/insert-interval.js"
-        },
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Magical Number",
-            "program": "${workspaceFolder}/Magical_Number/Magical_Number.js"
+
+            //"args": ["-r esm"],
+            "name": "Skyline probleme",
+            "program": "${workspaceFolder}/Hard/skyline-problem/debug.js"
         },
         {
             "type": "node",
             "request": "launch",
             "name": "Insert interval",
-            "program": "${workspaceFolder}/insert-interval/insert-interval.js"
+            "program": "${workspaceFolder}/hard/insert-interval/insert-interval.js"
         }
     ]
 }
