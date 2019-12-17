@@ -5,6 +5,7 @@
   "main": "index.js",
   "module": "main.js",
   "scripts": {
+    "test": "npm run lint",
     "start": "node -r esm Unfinished/Can_I_Win/unittest.js",
     "stop": "node Integer2Roman/Integer2Roman.js",
     "str2int": "node -r esm Medium/str2int/str2int.js",
@@ -20,7 +21,8 @@
     "webpack-server": "webpack-dev-server --config webpack.config.js --open",
     "server": "node  server.js",
     "web-server": "http-server ./public",
-    "fill_water":"node -r esm hard/fill_water/fill_water.js"
+    "fill_water": "node -r esm hard/fill_water/fill_water.js",
+    "interview1": "node -r esm interview/question2.js"
   },
   "pre-commit": [
     "test"
@@ -28,19 +30,22 @@
   "author": "MM",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
     "axios-debug": "0.0.4",
+    "babel": "^6.23.0",
     "debug": "^4.1.1",
     "detect-browser": "^3.0.1",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.19.1",
     "esm": "^3.1.0",
     "extend": "^3.0.2",
-    "grunt": "^1.0.3",
+    "grunt": "^1.0.4",
     "hls.js": "^0.10.1",
     "http-server": "^0.11.1",
     "latest": "^0.2.0",
     "loadjs": "^3.5.5",
     "moment": "^2.22.2",
-    "npm": "^6.4.1",
+    "npm": "^6.13.4",
     "require": "^2.4.20",
     "save-dev": "^2.0.0",
     "uglify": "^0.1.5",
@@ -62,7 +67,7 @@
     "express": "^4.16.4",
     "grunt-contrib-clean": "^2.0.0",
     "ignore-styles": "^5.0.1",
-    "jsdoc": "^3.5.5",
+    "jsdoc": "^3.6.3",
     "jsdom": "^11.12.0",
     "mocha": "^5.2.0",
     "node-sass": "^4.9.0",
