@@ -20,7 +20,7 @@
     "webpack-server": "webpack-dev-server --config webpack.config.js --open",
     "server": "node  server.js",
     "web-server": "http-server ./public",
-    "fill_water":"node -r esm hard/fill_water/fill_water.js"
+    "fill_water": "node -r esm hard/fill_water/fill_water.js"
   },
   "pre-commit": [
     "test"
