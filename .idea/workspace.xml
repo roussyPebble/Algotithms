@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac811cca-e171-4f20-81fc-87244e88a4a5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Medium/4Sum/4Sum.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview/question1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview/question2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Codility/binary-gap/binary-gap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Medium/3SumClosest/3SumClosest.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medium/3SumClosest/3SumClosest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Medium/3SumClosest/3sumClosest-2.js" beforeDir="false" afterPath="$PROJECT_DIR$/Medium/3SumClosest/3sumClosest-2.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,27 +24,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.eslintrc.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Medium/3SumClosest/3SumClosest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="73" column="12" lean-forward="true" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
-              <folding>
-                <element signature="e#193#1794#0" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="4" column="35" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Medium/4Sum/4Sum.js">
+        <entry file="file://$PROJECT_DIR$/Medium/3SumClosest/3sumClosest-2.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+            <state relative-caret-position="89">
+              <caret line="63" column="49" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="49" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Codility/binary-gap/binary-gap.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="58">
+              <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -64,30 +72,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
               <caret line="10" column="3" selection-end-line="68" selection-end-column="30" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interview/question2.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="34" column="23" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/interview/question1.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -126,6 +110,8 @@
         <option value="$PROJECT_DIR$/Medium/4Sum/4Sum.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Medium/3SumClosest/3SumClosest.js" />
+        <option value="$PROJECT_DIR$/Medium/3SumClosest/3sumClosest-2.js" />
+        <option value="$PROJECT_DIR$/Codility/binary-gap/binary-gap.js" />
       </list>
     </option>
   </component>
@@ -155,13 +141,13 @@
             <path>
               <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Medium" type="462c0819:PsiDirectoryNode" />
+              <item name="Codility" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Algorithm" type="b2602c69:ProjectViewProjectNode" />
               <item name="Algorithm" type="462c0819:PsiDirectoryNode" />
-              <item name="Medium" type="462c0819:PsiDirectoryNode" />
-              <item name="4Sum" type="462c0819:PsiDirectoryNode" />
+              <item name="Codility" type="462c0819:PsiDirectoryNode" />
+              <item name="binary-gap" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -203,11 +189,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.4Sum.js">
+  <component name="RunManager" selected="Node.js.binary-gap.js">
     <configuration name="3SumClosest.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" node-parameters="-r esm" path-to-js-file="3SumClosest.js" working-dir="$PROJECT_DIR$/Medium/3SumClosest">
       <method v="2" />
     </configuration>
+    <configuration name="3sumClosest-2.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" node-parameters="-r esm" path-to-js-file="3sumClosest-2.js" working-dir="$PROJECT_DIR$/Medium/3SumClosest">
+      <method v="2" />
+    </configuration>
     <configuration name="4Sum.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" node-parameters="-r esm" path-to-js-file="4Sum.js" working-dir="$PROJECT_DIR$/Medium/4Sum">
+      <method v="2" />
+    </configuration>
+    <configuration name="binary-gap.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" node-parameters="-r esm" path-to-js-file="binary-gap.js" working-dir="$PROJECT_DIR$/Codility/binary-gap">
       <method v="2" />
     </configuration>
     <configuration name="skyline" type="js.build_tools.npm" nameIsGenerated="true">
@@ -223,10 +215,14 @@
     <list>
       <item itemvalue="Node.js.3SumClosest.js" />
       <item itemvalue="Node.js.4Sum.js" />
+      <item itemvalue="Node.js.3sumClosest-2.js" />
+      <item itemvalue="Node.js.binary-gap.js" />
       <item itemvalue="npm.skyline" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.binary-gap.js" />
+        <item itemvalue="Node.js.3sumClosest-2.js" />
         <item itemvalue="Node.js.4Sum.js" />
         <item itemvalue="Node.js.3SumClosest.js" />
       </list>
@@ -261,20 +257,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28511000" />
+    <option name="totallyTimeSpent" value="32480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1176" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12846482" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.32981783" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" auto_hide="true" x="-1766" y="154" width="1876" height="814" id="Run" order="2" type="FLOATING" visible="true" weight="0.32598275" />
+      <window_info anchor="bottom" auto_hide="true" x="-1919" y="434" width="1876" height="814" id="Run" order="2" type="FLOATING" visible="true" weight="0.32598275" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -282,7 +276,8 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32981783" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3106424" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.44487056" />
+      <window_info anchor="bottom" id="Inspection Results" order="11" weight="0.32981783" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -423,11 +418,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Medium/3SumClosest/3SumClosest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="73" column="12" lean-forward="true" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
+        <state relative-caret-position="68">
+          <caret line="4" column="35" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Medium/3SumClosest/3sumClosest-2.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="63" column="49" lean-forward="true" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="49" />
           <folding>
-            <element signature="e#193#1794#0" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Codility/binary-gap/binary-gap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
         </state>
       </provider>
     </entry>
