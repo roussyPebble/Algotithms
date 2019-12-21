@@ -2,3 +2,4 @@
 node_modules
 obj/
 bin/
+.idea/workspace.xml
